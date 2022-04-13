@@ -1,5 +1,8 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
+
+sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
+
 ver="1.17.2"
 cd $HOME
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
@@ -15,8 +18,8 @@ git checkout main
 make install
 cd $HOME
 ARCHWAY_CHAIN="torii-1"
-ARCHWAY_MONIKER="paparim" # come up with your validator name
-ARCHWAY_WALLET="paparim_wallet"
+ARCHWAY_MONIKER="kokodjamboa" # come up with your validator name
+ARCHWAY_WALLET="kokodjambo_wallet"
 echo 'export ARCHWAY_CHAIN='${ARCHWAY_CHAIN} >> $HOME/.bash_profile
 echo 'export ARCHWAY_MONIKER='${ARCHWAY_MONIKER} >> $HOME/.bash_profile
 echo 'export ARCHWAY_WALLET='${ARCHWAY_WALLET} >> $HOME/.bash_profile
@@ -36,6 +39,7 @@ archwayd gentx $ARCHWAY_WALLET 1000000utorii \
   --chain-id=torii-1 \
   --moniker="${ARCHWAY_MONIKER}"
   
+  Leha240818
 # OUTPUT EXAMPLE
 # Genesis transaction written to "~/.archway/config/gentx/gentx-7fba3a5XXXXXXXXXXXXXXXXXXXxxxxXXXXXXX1.json"
 
